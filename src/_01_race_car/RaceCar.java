@@ -31,6 +31,10 @@ public class RaceCar {
 		return this.positionInRace;
 	}
 	
+	void setPosition(int position) {
+		this.positionInRace=position;
+	}
+	
 	public String getBrand() {
 		return this.brand;
 	}

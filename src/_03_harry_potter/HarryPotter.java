@@ -22,8 +22,8 @@ public class HarryPotter {
 		System.out.println("making Harry Potter...");
 	}
 
-	void castSpell(String spell) {
-		System.out.println("casting spell: " + spell);
+	void castSpell(String spell, String person) {
+		System.out.println("He casts a " + spell + " at " + person+"!");
 	}
 
 	void makeInvisible(boolean invisible) {
@@ -36,7 +36,7 @@ public class HarryPotter {
 	}
 
 	void spyOnSnape() {
-		System.out.println("Harry sees Professor Snape doing nefarious things.");
+		System.out.println("Harry sees Professor Snape doing nefarious things, like terrorising Neville Longbottom.");
 	}
 
 }

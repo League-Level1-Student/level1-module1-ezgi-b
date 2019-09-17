@@ -8,6 +8,15 @@ package _01_race_car;
 
 public class RaceCarRunner {
 	public static void main(String[] args) {
+		RaceCar speed = new RaceCar("Honda",5);
+			System.out.println(speed.getPositionInRace());
+			speed.setPosition(12);
+			System.out.println(speed.getPositionInRace());
+			speed.crash();
+			speed.pit();
+			for(int i=0; i<14;i++) {
+				speed.overtake();
+			}
 		/* Do the following things without changing the RaceCar class */
 		
 		// 1. Create a RaceCar and place it in 5th position
