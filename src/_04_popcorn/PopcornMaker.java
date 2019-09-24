@@ -8,6 +8,14 @@ public class PopcornMaker {
 		Popcorn butter = new Popcorn(flavor);
 		Microwave micro = new Microwave();
 		micro.putInMicrowave(butter);
-		String cookTime = JOptionPane.showInputDialog("How many minutes should it cook for?");
+		
+		boolean cooked = butter.getIsCooked();
+		int cookTime;
+		while(!cooked) {
+		cookTime = Integer.parseInt(JOptionPane.showInputDialog("How many minutes should it cook for?"));
+		micro.setTime(cookTime);
+		micro.startMicrowave();
+		cooked = butter.getIsCooked();
+		}
 	}
 }

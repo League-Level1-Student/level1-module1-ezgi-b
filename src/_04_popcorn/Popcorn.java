@@ -45,13 +45,24 @@ class Microwave {
 
 public class Popcorn {
 
-	private int kernels = 20;
+	private int kernels = 35;
 	private String flavor;
 	private boolean isCooked = false;
 
 	Popcorn(String flavor) {
 		this.flavor = flavor;
 		System.out.println("Popcorn says: making package of " + this.flavor + " popcorn.");
+	}
+
+	public void applyHeat() {
+		pause();
+	
+		if (kernels == 0) {
+			isCooked = true;
+		} else {
+			System.out.println("POP!" + kernels);
+			kernels--;
+		}
 	}
 
 	public void eat() {
@@ -62,23 +73,16 @@ public class Popcorn {
 		}
 	}
 	
-	public void applyHeat() {
-		pause();
-
-		if (kernels == 0) {
-			isCooked = true;
-		} else {
-			System.out.println("POP!" + kernels);
-			kernels--;
-		}
-	}
-
 	private void pause() {
 		try {
 			Thread.sleep(150);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
+	}
+	
+	public boolean getIsCooked() {
+		return isCooked;
 	}
 	
 }
