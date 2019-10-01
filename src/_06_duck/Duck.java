@@ -8,6 +8,7 @@ public class Duck {
 		this.favoriteFood=favoriteFood;
 		this.numberOfFriends=numberOfFriends;
 		this.name=name;
+		System.out.println("A duck named " + this.name + " exists!");
 	}
 	void quack() {
 		System.out.println(name+" is quacking!");
